@@ -261,7 +261,7 @@ process.
 
 ### Limitations
 
-* The solution is designed uses AWS SDK Boto3 running on a Lambda function, consider that Lambda has a maximum timeout value of 15 mins
+* The solution utilizes AWS SDK Boto3 running in a Lambda function, consider that Lambda has a maximum timeout value of 15 mins
 * The maximum supported individual objects size that can be transferred is around 10GB
 
 ### Additional Resources
