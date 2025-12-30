@@ -159,9 +159,9 @@ Create an Amazon S3 Batch Operations Invoke Lambda Job to start the migration pr
 
 1.	Go to the Amazon S3 console.
 2.	From the navigation pane, choose Batch Operations and choose Create job. 
-    o	For Manifest format, select CSV and enter the S3 location. Then, choose Next.
-    o	For Operation type, select Invoke AWS Lambda function.
-    o	For Lambda function, select the Lambda function that has been automatically created, to locate the function, start typing the Stack name, this will filter the displayed function names. The function name will be in the format “StackName-S3BatchCopyLambdafunction-.” For example, if you specified your CloudFormation stack name as “urltos3” then the S3 Batch Lambda function name will be “urltos3-S3BatchCopyLambdafunction-.” For Invocation schema version leave it at the default "Version 1.0, then, choose Next.
+    -	For Manifest format, select CSV and enter the S3 location. Then, choose Next.
+    -	For Operation type, select Invoke AWS Lambda function.
+    -	For Lambda function, select the Lambda function that has been automatically created, to locate the function, start typing the Stack name, this will filter the displayed function names. The function name will be in the format “StackName-S3BatchCopyLambdafunction-.” For example, if you specified your CloudFormation stack name as “urltos3” then the S3 Batch Lambda function name will be “urltos3-S3BatchCopyLambdafunction-.” For Invocation schema version leave it at the default "Version 1.0, then, choose Next.
 
 3.	For Path to completion report destination, enter the name of the Amazon S3 bucket automatically created by the solution. The name of the bucket is also available in the Stack output section
 
@@ -174,7 +174,7 @@ Create an Amazon S3 Batch Operations Invoke Lambda Job to start the migration pr
 ![](assets/batch-operations-job-console.png)
 
 
-Note:
+**_Note:_** 
 If the destination Amazon S3 bucket has default encryption with Customer Managed KMS, you will need to grant the solution AWS Lambda Copy function IAM role access to the KMS Key. To locate the solution IAM role, please goto the CloudFormation Stack you just created, choose the Resources section, copy and paste S3BatchCopyLambdaFunctionIamRole into the Search Resources field. Choose the link under the PhysicalID column, this will open a new browser tab with the details of the IAM role.
 
 
@@ -196,7 +196,7 @@ A lifecycle expiration rule is automatically applied to the guidance S3 bucket t
 
 ### Performance, Troubleshooting and Guidance
 
-The tool is dependent on the availability and performance of multiple underlying AWS services including S3, Lambda and IAM services and the source Webserver.
+The tool is dependent on the availability and performance of multiple underlying AWS services including S3, Lambda and IAM services and the source Webserver. The migration throughput is also determined by your existing web hosting provider.
 
 If you have a very large number of objects in the manifest, it is recommended to keep each job below 1 billion. 
 
@@ -259,10 +259,13 @@ process.
 
 ![](assets/performance-testing-medium.jpg)
 
+**_Note:_** 
+The above result assumes that your existing web hosting provider can scale to meet high request and throughput required to achieve this.
+
 ### Limitations
 
 * The solution utilizes AWS SDK Boto3 running in a Lambda function, consider that Lambda has a maximum timeout value of 15 mins
-* The maximum supported individual objects size that can be transferred is around 10GB
+* The maximum supported individual object size that can be transferred is around 10GB
 
 ### Additional Resources
 
