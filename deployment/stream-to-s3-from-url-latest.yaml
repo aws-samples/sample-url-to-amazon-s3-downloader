@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  Download in Bulk from URL with Manifest using Amazon S3 Batch Operations
+  Serverless Tool to Migrate Existing Website Assets to Amazon S3 and CloudFront CDN (uksb-wwzt09fy94)
 Metadata:
   License:
     Description: >-
