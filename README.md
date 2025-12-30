@@ -21,7 +21,7 @@
 <a name="1-overview"></a>
 ## 1. Overview
 
-The Webserver to Amazon S3 Migration Tool provides an serverless solution to migrate website content or assets from an existing web hosting provider to AWS, the content can now be hosted and served using an [Amazon S3](https://aws.amazon.com/s3/) bucket and a [Amazon Cloudfront Distribution](https://aws.amazon.com/cloudfront/) (CDN). This tool is espeically useful for customers that do not have backend access (filesystem, SFTP, FTP, S3 API, and Directory listing) to their existing web content, but wants to migrate their content, for example [media and html content to an Amazon S3 bucket which will then be served via a Cloudfront distribution](https://aws.amazon.com/cloudfront/getting-started/S3/).
+The Webserver to Amazon S3 Migration Tool provides a serverless solution to migrate website content or assets from an existing web hosting provider to AWS, the content can now be hosted and served using an [Amazon S3](https://aws.amazon.com/s3/) bucket and a [Amazon Cloudfront Distribution](https://aws.amazon.com/cloudfront/) (CDN). This tool is espeically useful for customers that do not have backend access (filesystem, SFTP, FTP, S3 API, and Directory listing) to their existing web content, but wants to migrate their content, for example [media and html content to an Amazon S3 bucket which will then be served via a Cloudfront distribution](https://aws.amazon.com/cloudfront/getting-started/S3/).
 
 
 #### High Level workflow
